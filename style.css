@@ -191,8 +191,6 @@ footer {
     font-size: 1.1em;
 }
 
-
-
 .newsletter {
     transition: .1s;
 }
@@ -262,7 +260,13 @@ footer {
     width: 30px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 1090px) {
+    .produtos {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 822px) {
 
     .banner img {
         height: 200px;
