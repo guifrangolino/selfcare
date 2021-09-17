@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root {
+    --verde: #5CA720;
+    --preto: #161616;
+    --cinza-linha: #A5A1A1;
+    --cinza-footer: #F9F9F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    /* max-width: 1280px; */
+    margin: auto;
+}
+
+.header {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    width: 110px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav img {
+    width: 22px;
+}
+
+.banner img {
+    width: 100%;
+    margin: auto;
+}
+
+.linha {
+    border-bottom: solid 1px var(--cinza-linha);
+}
+
+/* BOTÃO DE PESQUISA */
+
+.pesquisa {
+    position: relative;
+    transition: 0.5s;
+    height: 27px;
+    width: 22px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pesquisa.active {
+    width: 300px;
+}
+
+.icone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+}
+
+.pesquisa .input {
+    position: relative;
+    width: 270px;
+    height: 25px;
+}
+
+.pesquisa input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px var(--cinza-linha);
+    font-size: 1em;
+}
+
+/* BOTÃO DE PESQUISA */
+
+nav a:hover {
+    border-bottom: solid 1px var(--cinza-linha);
+    padding-bottom: 5px;
+    transition: 5s;
+}
+
+.barra-produtos {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.barra-produtos div p strong {
+    font-size: 1.1em;
+}
+
+.produtos {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 20px;
+    transition: .1s;
+}
+
+.produtos a {
+    text-decoration: none;
+}
+
+.produtos img {
+    width: 303px;
+    height: 303px;
+    object-fit: cover;
+}
+
+.produto-infos {
+    font-size: 1.1em;
+    padding: 10px 0;
+    color: var(--preto);
+}
+
+.produto-infos p {
+    margin: 10px 0;
+}
+
+.produto-infos p:nth-child(1) {
+    font-size: 1.2em;
+}
+
+.produto-infos p strong {
+    color: var(--verde);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.produto {
+    padding: 10px;
+    transition: .3s;
+}
+
+.produto:hover {
+    transform: translateX(0) scale(1.1);
+    box-shadow: 0px 0px 20px 10px #0000002e;
+}
+
+footer {
+    background: var(--cinza-footer);
+}
+
+.fundo-o-n {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes a {
+    text-decoration: none;
+    margin: 5px 0;
+    color: #161616;
+    font-size: 1.1em;
+}
+
+
+
+.newsletter {
+    transition: .1s;
+}
+
+.newsletter p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.newsletter input {
+    width: 350px;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px var(--cinza-linha);
+    outline: none;
+    padding: 15px 10px;
+    font-size: 1em;
+}
+
+.newsletter input::placeholder {
+    font-size: 1em;
+}
+
+.newsletter button {
+    background: var(--verde);
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+}
+
+.newsletter button:active {
+    transform: translateX(0) scale(0.95);
+    transition: .1s;
+}
+
+.fundo-contato {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.contato {
+    display: flex;
+    gap: 20px;
+}
+
+.contato img {
+    width: 30px;
+}
+
+.meios-de-pagamento {
+    display: flex;
+    gap: 20px;
+}
+
+.meios-de-pagamento img {
+    width: 50px;
+}
+
+.meios-de-pagamento img:nth-child(2) {
+    width: 30px;
+}
+
+@media (max-width: 830px) {
+
+    .banner img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .produtos {
+        justify-content: space-evenly;
+    }
+
+    .produtos img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .fundo-o-n {
+        flex-direction: column;
+    }
+
+    .opcoes {
+        align-self: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 30px);
+        padding: 0 30px;
+    }
+
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .newsletter button {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 630px) {
+    
+    .produtos {
+        gap: 20px;
+    }
+    
+    .produtos img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .produto-infos {
+        font-size: 0.8em;
+    }
+    
+}
+
+@media (max-width: 590px) {
+    .pesquisa.active {
+        width: calc(100vw - 60px);
+    }
+
+    .pesquisa .input {
+        width: calc(100vw - 100px);
+    }
+
+    .logo.active {
+        visibility: hidden;
+        display: none;
+    }
+
+    .user.active {
+        visibility: hidden;
+        display: none;
+    }
+
+    .carrinho.active {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .produtos {
+        gap: 0;
+    }
+    
+    .produtos img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .produto-infos {
+        font-size: 0.8em;
+    }
+
+    .opcoes a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .produtos img {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+    }
+
+    .produto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .produto-infos {
+        font-size: 0.6em;
+    }
+
+    .fundo-contato {
+        justify-content: baseline;
+    }
+
+    .contato img {
+        width: 20px;
+    }
+
+    .meios-de-pagamento img {
+        width: 30px;
+    }
+    
+    .meios-de-pagamento img:nth-child(2) {
+        width: 20px;
+    }
+}
